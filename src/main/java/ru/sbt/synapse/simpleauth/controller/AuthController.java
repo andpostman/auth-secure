@@ -15,9 +15,9 @@ public class AuthController {
         return "main";
     }
 
-    @GetMapping("/purchasing-department")
+    @GetMapping("/sales-department")
     public String viewPurchasingPage(){
-        return "purchasing-department";
+        return "sales-department";
     }
 
     @GetMapping("/accountant")

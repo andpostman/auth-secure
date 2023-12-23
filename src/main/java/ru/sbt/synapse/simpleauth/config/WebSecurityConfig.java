@@ -49,7 +49,7 @@ public class WebSecurityConfig{
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(
                 auth -> auth
-                        .requestMatchers("/purchasing-department/**").hasRole("PURCHASING_DEPARTMENT")
+                        .requestMatchers("/sales-department/**").hasRole("SALES_DEPARTMENT")
                         .requestMatchers("/accountant/**").hasRole("ACCOUNTANT")
                         .requestMatchers("/warehouse/**").hasRole("WAREHOUSE")
                         .requestMatchers("/","/css/**","/js/**").permitAll()
@@ -60,8 +60,8 @@ public class WebSecurityConfig{
                     Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
                     for (GrantedAuthority authority : authorities) {
                         log.info("auth: {}",authority.getAuthority());
-                        if (authority.getAuthority().equals("ROLE_PURCHASING_DEPARTMENT")) {
-                            response.sendRedirect("/purchasing-department");
+                        if (authority.getAuthority().equals("ROLE_SALES_DEPARTMENT")) {
+                            response.sendRedirect("/sales-department");
                             return;
                         }
                         else if (authority.getAuthority().equals("ROLE_ACCOUNTANT")){

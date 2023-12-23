@@ -1,5 +1,5 @@
 body {
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #ffffff, #4CAF50);
     font-family: Arial, sans-serif;
 }
 
@@ -28,7 +28,7 @@ h1 {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #007bff;
+    background-color: darkgrey;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;

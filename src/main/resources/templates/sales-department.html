@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отдел закупок</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sales-department.css}">
+</head>
+<body>
+    <h1>Добро пожаловать в отдел продаж!</h1>
+
+    <div class="form-group">
+        <label for="product">Номер Производственного Заказа:</label>
+        <input type="text" id="num" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Дата регистрации Производственного Заказа:</label>
+        <input type="text" id="data_reg" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="supplier">Вид ГП или сервисных услуг (гарантийный и постгарантийный ремонт, пусконаладочные работы):</label>
+        <input type="text" id="kind_gp" name="supplier" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Ресурсная спецификация, определенная для данного производственного заказа:</label>
+        <input type="text" id="resource_spec" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Этапы выполнения готовой продукции по технологической карте (ресурсной спецификации):</label>
+        <input type="text" id="paths" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Материалы, отнесенные в Производственный заказ по каждому этапу</label>
+        <input type="number" id="instrument" name="quantity" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Дата поступления на склад ГП:</label>
+        <input type="text" id="date_post_gp" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Бригадир (ФИО):</label>
+        <input type="text" id="brigadir" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">ИТОГО (руб.). (ГП производимая по Производственным заказам продается посредством формы Заказа продаж):</label>
+        <input type="text" id="result_gp" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Номер Заказа продаж:</label>
+        <input type="text" id="product" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="supplier">Покупатель (реквизиты):</label>
+        <input type="text" id="supplier" name="supplier" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Контактное лицо (ФИО, должность, телефон, эл.почта)):</label>
+        <input type="text" id="FIO" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Дата регистрации Заказа:</label>
+        <input type="text" id="data_prod" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Дата отгрузки:</label>
+        <input type="text" id="data_tmc" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">№ договора дата договора с Покупателем:</label>
+        <input type="text" id="number" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Согласие Отдела продаж на отгрузку</label>
+        <input type="number" id="quantity" name="quantity" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Зарезервированная ГП через Форму складских остатков</label>
+        <input type="number" id="sign_up_gp" name="quantity" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Менеджер продаж (ФИО):</label>
+        <input type="text" id="manager" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Итого без скидки на ГП на продажу (руб.);:</label>
+        <input type="text" id="res_gp" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Скидка на ГП на продажу (руб.);:</label>
+        <input type="text" id="seil" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">НДС (20%):</label>
+        <input type="text" id="nds" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">ИТОГО ГП на продажу (руб.).(ГП продаваемая через форму Заказа продаж пополняется через Производственные заказы):</label>
+        <input type="text" id="res" name="product" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="product">Наименование ГП:</label>
+        <input type="text" id="name_gp" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Наименование ТМЦ:</label>
+        <input type="text" id="name_tmc" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Количество ТМЦ</label>
+        <input type="number" id="quantity_tmc" name="quantity" class="form-control">
+    </div>
+    <button type="submit" class="btn">Отправить заказ</button>
+
+    <form th:action="@{/logout}" method="post" class="logout-form">
+        <button type="submit" class="btn-logout">Logout</button>
+    </form>
+
+</body>
+</html>

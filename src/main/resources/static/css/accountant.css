@@ -2,6 +2,9 @@
 .form-group {
     margin-bottom: 20px;
 }
+body {
+    background: linear-gradient(to bottom, #ffffff, #4CAF50);
+}
 label {
     display: block;
     margin-bottom: 5px;
@@ -17,7 +20,7 @@ textarea {
 }
 .btn {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: darkgrey;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -36,7 +39,7 @@ h1 {
 }
 
 .btn-logout {
-    background-color: #ff0000;
+    background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -45,5 +48,5 @@ h1 {
 }
 
 .btn-logout:hover {
-    background-color: #cc0000;
+    background-color: #007bff;
 }
