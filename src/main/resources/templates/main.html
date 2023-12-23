@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page TCS</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" >
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Main Page TCS</h1>
+        <p class="description">This is a stylish and trendy start page.</p>
+        <p>Please click the button below to login:</p>
+        <a th:href="@{/login}" class="btn">Login</a>
+    </div>
+</body>
+</html>

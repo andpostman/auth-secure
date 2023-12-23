@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Склад</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/warehouse.css}">
+</head>
+<body>
+    <h1>Добро пожаловать на склад!</h1>
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th>Артикул</th>
+                <th>Наименование</th>
+                <th>ед. измерения</th>
+                <th>Себестоимость единицы (без НДС)</th>
+                <th>В наличии</th>
+                <th>В резерве</th>
+                <th>Доступно</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="editable-cell"><input type="text" name="input1" /></td>
+                <td class="editable-cell"><input type="text" name="input2" /></td>
+                <td class="editable-cell"><input type="text" name="input3" /></td>
+                <td class="editable-cell"><input type="text" name="input4" /></td>
+                <td class="editable-cell"><input type="text" name="input5" /></td>
+                <td class="editable-cell"><input type="text" name="input6" /></td>
+                <td class="editable-cell"><input type="text" name="input7" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label for="product">Наименование ГП:</label>
+        <input type="text" id="product" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="product">Наименование ТМЦ:</label>
+        <input type="text" id="name_tmc" name="product" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Количество ТМЦ</label>
+        <input type="number" id="quantity" name="quantity" class="form-control">
+    </div>
+
+
+    <button type="submit" class="btn">Добавить на склад</button>
+
+    <form th:action="@{/logout}" method="post" class="logout-form">
+        <button type="submit" class="btn-logout">Logout</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бухгалтерия</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/accountant.css}">
+</head>
+<body>
+    <h1>Добро пожаловать в бухгалтерию!</h1>
+
+    <div class="form-group">
+        <label for="invoiceNumber">Номер счета:</label>
+        <input type="text" id="invoiceNumber" name="invoiceNumber" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Дата:</label>
+        <input type="text" id="date" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Банк отправитель:</label>
+        <input type="text" id="recipient" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Банк получатель:</label>
+        <input type="text" id="bank_get" name="recipient" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="recipient">Сумма полученная:</label>
+        <input type="text" id="sum_get" name="recipient" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="recipient">Сумма оплаченная:</label>
+        <input type="text" id="sum_send" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Формулировка платежа:</label>
+        <input type="text" id="pay" name="recipient" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="invoiceNumber">Расчетный месяц:</label>
+        <input type="text" id="month" name="invoiceNumber" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="recipient">Сотрудники ФИО:</label>
+        <input type="text" id="employee_fio" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Начислено (рассчитанная и отраженная в ERP-системе зарплата за месяц по каждому сотруднику, руб. Начислено включает в себя Аванс + Зарплата к выплате):</label>
+        <input type="text" id="nachisl" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Аванс (рассчитанный аванс за месяц по каждому сотруднику, руб.):</label>
+        <input type="text" id="avans" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">Зарплата к выплате (Начислено - Аванс по каждому сотруднику, руб. в этом месяце):</label>
+        <input type="text" id="zp" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">НДФЛ (Начислено * 13% по каждому сотруднику, руб.):</label>
+        <input type="text" id="ndfl" name="recipient" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="recipient">взносы (ПФР,ОМС, ФСС,ФССтр) (31% от суммарного Начислено по всем сотрудникам):</label>
+        <input type="text" id="vznos" name="recipient" class="form-control">
+    </div>
+
+    <button type="submit" class="btn">Создать счет</button>
+
+    <form th:action="@{/logout}" method="post" class="logout-form">
+        <button type="submit" class="btn-logout">Logout</button>
+    </form>
+</body>
+</html>
